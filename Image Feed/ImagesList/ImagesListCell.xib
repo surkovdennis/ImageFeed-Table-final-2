@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="ImagesListCell" rowHeight="224" id="x0h-Hb-VYx" customClass="ImagesListCell" customModule="Image_Feed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0h-Hb-VYx" id="8O0-9i-mXz">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-Ax-8Lo">
+                        <rect key="frame" x="20" y="11" width="374" height="202"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYd-Hs-FN8" userLabel="Like Button">
+                        <rect key="frame" x="352" y="11" width="42" height="42"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="like_button_on"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 августа 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQr-hk-4nB" userLabel="Date Label">
+                        <rect key="frame" x="28" y="189" width="358" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="pb9-Ax-8Lo" secondAttribute="bottom" id="DpK-ke-zDP"/>
+                    <constraint firstItem="pb9-Ax-8Lo" firstAttribute="top" secondItem="8O0-9i-mXz" secondAttribute="topMargin" id="Fjv-GP-Efb"/>
+                    <constraint firstItem="pb9-Ax-8Lo" firstAttribute="leading" secondItem="8O0-9i-mXz" secondAttribute="leadingMargin" id="NCU-zI-SPY"/>
+                    <constraint firstItem="RQr-hk-4nB" firstAttribute="leading" secondItem="pb9-Ax-8Lo" secondAttribute="leading" constant="8" id="T6l-sj-DdS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pb9-Ax-8Lo" secondAttribute="trailing" id="Yju-6g-jPW"/>
+                    <constraint firstItem="pb9-Ax-8Lo" firstAttribute="bottom" secondItem="RQr-hk-4nB" secondAttribute="bottom" constant="8" id="YyD-wd-BpS"/>
+                    <constraint firstItem="pb9-Ax-8Lo" firstAttribute="trailing" secondItem="QYd-Hs-FN8" secondAttribute="trailing" id="elC-3m-csa"/>
+                    <constraint firstItem="RQr-hk-4nB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pb9-Ax-8Lo" secondAttribute="trailing" constant="-8" id="sNN-sg-9Qn"/>
+                    <constraint firstItem="QYd-Hs-FN8" firstAttribute="top" secondItem="pb9-Ax-8Lo" secondAttribute="top" id="tTr-aL-E6x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="cellImage" destination="pb9-Ax-8Lo" id="Vif-7J-dAq"/>
+                <outlet property="dateLabel" destination="RQr-hk-4nB" id="mnC-ku-R9C"/>
+                <outlet property="likeButton" destination="QYd-Hs-FN8" id="8C7-pg-s71"/>
+            </connections>
+            <point key="canvasLocation" x="147" y="42"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="0" width="200" height="132"/>
+        <image name="like_button_on" width="42" height="42"/>
+    </resources>
+</document>
