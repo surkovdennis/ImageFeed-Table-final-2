@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BC2EB76298AD7CD00A7482C /* ImagesListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC2EB75298AD7CD00A7482C /* ImagesListCell.xib */; };
 		7D3DFB1528DDF696005A13F3 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3DFB1328DDF696005A13F3 /* ImagesListCell.swift */; };
 		7D3DFB1628DDF696005A13F3 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3DFB1428DDF696005A13F3 /* ImagesListViewController.swift */; };
 		7D9CFA4328DDEE7F00D971A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9CFA4228DDEE7F00D971A7 /* AppDelegate.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1BC2EB75298AD7CD00A7482C /* ImagesListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesListCell.xib; sourceTree = "<group>"; };
 		7D3DFB1328DDF696005A13F3 /* ImagesListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		7D3DFB1428DDF696005A13F3 /* ImagesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
 		7D9CFA3F28DDEE7F00D971A7 /* Image Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				7D3DFB1328DDF696005A13F3 /* ImagesListCell.swift */,
-				1BC2EB75298AD7CD00A7482C /* ImagesListCell.xib */,
 				7D3DFB1428DDF696005A13F3 /* ImagesListViewController.swift */,
 			);
 			path = ImagesList;
@@ -140,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9CFA4F28DDEE8000D971A7 /* LaunchScreen.storyboard in Resources */,
-				1BC2EB76298AD7CD00A7482C /* ImagesListCell.xib in Resources */,
 				7D9CFA4C28DDEE8000D971A7 /* Assets.xcassets in Resources */,
 				7D9CFA4A28DDEE7F00D971A7 /* Main.storyboard in Resources */,
 			);

@@ -1,23 +1,12 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
-    private struct Constants {
-        static let id = String(describing: ImagesListCell.self)
-    }
-    
-    @IBOutlet private var tableView: UITableView! {
-        didSet {
-            tableView.register(UINib(nibName: Constants.id, bundle: nil), forCellReuseIdentifier: Constants.id)
-        }
-    }
+    @IBOutlet private var tableView: UITableView!
 
     private var photosName = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
 
         photosName = Array(0..<20).map{ "\($0)" }
     }
@@ -36,21 +25,25 @@ extension ImagesListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let imageListCell = tableView.dequeueReusableCell(withIdentifier: Constants.id, for: indexPath) as? ImagesListCell else {
-            return UITableViewCell()
-        }
-        
-        let image = UIImage(named: photosName[indexPath.row])
-        let date = dateFormatter.string(from: Date())
-        let isLiked = indexPath.row % 2 == 0
-        imageListCell.configure(image: image, date: date, isLiked: isLiked)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier, for: indexPath) as? ImagesListCell
+
+        configCell(for: imageListCell, with: indexPath)
+
         return imageListCell
     }
 }
 
-extension ImagesListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+extension ImagesListViewController {
+    func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
+        guard let image = UIImage(named: photosName[indexPath.row]) else {
+            return
+        }
+
+        cell.cellImage.image = image
+        cell.dateLabel.text = dateFormatter.string(from: Date())
+
+        let isLiked = indexPath.row % 2 == 0
+        let likeImage = isLiked ? UIImage(named: "like_button_on") : UIImage(named: "like_button_off")
+        cell.likeButton.setImage(likeImage, for: .normal)
     }
 }
